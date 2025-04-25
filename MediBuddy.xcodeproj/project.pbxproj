@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41D1B5112DBC09910028961D /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 41D1B5102DBC09910028961D /* FirebaseCore */; };
+		41D1B5132DBC09A20028961D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 41D1B5122DBC09A20028961D /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4113AB302DB8B44600ED2771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4113AB172DB8B44300ED2771 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4113AB1E2DB8B44300ED2771;
+			remoteInfo = MediBuddy;
+		};
+		4113AB3A2DB8B44600ED2771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4113AB172DB8B44300ED2771 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4113AB1E2DB8B44300ED2771;
+			remoteInfo = MediBuddy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4113AB1F2DB8B44300ED2771 /* MediBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4113AB2F2DB8B44600ED2771 /* MediBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4113AB392DB8B44600ED2771 /* MediBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4113AB212DB8B44300ED2771 /* MediBuddy */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MediBuddy;
+			sourceTree = "<group>";
+		};
+		4113AB322DB8B44600ED2771 /* MediBuddyTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MediBuddyTests;
+			sourceTree = "<group>";
+		};
+		4113AB3C2DB8B44600ED2771 /* MediBuddyUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MediBuddyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4113AB1C2DB8B44300ED2771 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D1B5112DBC09910028961D /* FirebaseCore in Frameworks */,
+				41D1B5132DBC09A20028961D /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113AB2C2DB8B44600ED2771 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113AB362DB8B44600ED2771 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4113AB162DB8B44300ED2771 = {
+			isa = PBXGroup;
+			children = (
+				4113AB212DB8B44300ED2771 /* MediBuddy */,
+				4113AB322DB8B44600ED2771 /* MediBuddyTests */,
+				4113AB3C2DB8B44600ED2771 /* MediBuddyUITests */,
+				41D1B50F2DBC09910028961D /* Frameworks */,
+				4113AB202DB8B44300ED2771 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4113AB202DB8B44300ED2771 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4113AB1F2DB8B44300ED2771 /* MediBuddy.app */,
+				4113AB2F2DB8B44600ED2771 /* MediBuddyTests.xctest */,
+				4113AB392DB8B44600ED2771 /* MediBuddyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41D1B50F2DBC09910028961D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4113AB1E2DB8B44300ED2771 /* MediBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4113AB432DB8B44600ED2771 /* Build configuration list for PBXNativeTarget "MediBuddy" */;
+			buildPhases = (
+				4113AB1B2DB8B44300ED2771 /* Sources */,
+				4113AB1C2DB8B44300ED2771 /* Frameworks */,
+				4113AB1D2DB8B44300ED2771 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4113AB212DB8B44300ED2771 /* MediBuddy */,
+			);
+			name = MediBuddy;
+			packageProductDependencies = (
+				41D1B5102DBC09910028961D /* FirebaseCore */,
+				41D1B5122DBC09A20028961D /* FirebaseFirestore */,
+			);
+			productName = MediBuddy;
+			productReference = 4113AB1F2DB8B44300ED2771 /* MediBuddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4113AB2E2DB8B44600ED2771 /* MediBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4113AB462DB8B44600ED2771 /* Build configuration list for PBXNativeTarget "MediBuddyTests" */;
+			buildPhases = (
+				4113AB2B2DB8B44600ED2771 /* Sources */,
+				4113AB2C2DB8B44600ED2771 /* Frameworks */,
+				4113AB2D2DB8B44600ED2771 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4113AB312DB8B44600ED2771 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4113AB322DB8B44600ED2771 /* MediBuddyTests */,
+			);
+			name = MediBuddyTests;
+			packageProductDependencies = (
+			);
+			productName = MediBuddyTests;
+			productReference = 4113AB2F2DB8B44600ED2771 /* MediBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4113AB382DB8B44600ED2771 /* MediBuddyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4113AB492DB8B44600ED2771 /* Build configuration list for PBXNativeTarget "MediBuddyUITests" */;
+			buildPhases = (
+				4113AB352DB8B44600ED2771 /* Sources */,
+				4113AB362DB8B44600ED2771 /* Frameworks */,
+				4113AB372DB8B44600ED2771 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4113AB3B2DB8B44600ED2771 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4113AB3C2DB8B44600ED2771 /* MediBuddyUITests */,
+			);
+			name = MediBuddyUITests;
+			packageProductDependencies = (
+			);
+			productName = MediBuddyUITests;
+			productReference = 4113AB392DB8B44600ED2771 /* MediBuddyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4113AB172DB8B44300ED2771 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					4113AB1E2DB8B44300ED2771 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					4113AB2E2DB8B44600ED2771 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4113AB1E2DB8B44300ED2771;
+					};
+					4113AB382DB8B44600ED2771 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4113AB1E2DB8B44300ED2771;
+					};
+				};
+			};
+			buildConfigurationList = 4113AB1A2DB8B44300ED2771 /* Build configuration list for PBXProject "MediBuddy" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4113AB162DB8B44300ED2771;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4113AC722DBA457500ED2771 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4113AB202DB8B44300ED2771 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4113AB1E2DB8B44300ED2771 /* MediBuddy */,
+				4113AB2E2DB8B44600ED2771 /* MediBuddyTests */,
+				4113AB382DB8B44600ED2771 /* MediBuddyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4113AB1D2DB8B44300ED2771 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113AB2D2DB8B44600ED2771 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113AB372DB8B44600ED2771 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4113AB1B2DB8B44300ED2771 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113AB2B2DB8B44600ED2771 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113AB352DB8B44600ED2771 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4113AB312DB8B44600ED2771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4113AB1E2DB8B44300ED2771 /* MediBuddy */;
+			targetProxy = 4113AB302DB8B44600ED2771 /* PBXContainerItemProxy */;
+		};
+		4113AB3B2DB8B44600ED2771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4113AB1E2DB8B44300ED2771 /* MediBuddy */;
+			targetProxy = 4113AB3A2DB8B44600ED2771 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4113AB412DB8B44600ED2771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4113AB422DB8B44600ED2771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4113AB442DB8B44600ED2771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MediBuddy/Preview Content\"";
+				DEVELOPMENT_TEAM = 838M9BG9G8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "To login and view private data";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lk.nibm.sachin.MediBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4113AB452DB8B44600ED2771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MediBuddy/Preview Content\"";
+				DEVELOPMENT_TEAM = 838M9BG9G8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "To login and view private data";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lk.nibm.sachin.MediBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4113AB472DB8B44600ED2771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lk.nibm.sachin.MediBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediBuddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MediBuddy";
+			};
+			name = Debug;
+		};
+		4113AB482DB8B44600ED2771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lk.nibm.sachin.MediBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediBuddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MediBuddy";
+			};
+			name = Release;
+		};
+		4113AB4A2DB8B44600ED2771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lk.nibm.sachin.MediBuddyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MediBuddy;
+			};
+			name = Debug;
+		};
+		4113AB4B2DB8B44600ED2771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lk.nibm.sachin.MediBuddyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MediBuddy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4113AB1A2DB8B44300ED2771 /* Build configuration list for PBXProject "MediBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4113AB412DB8B44600ED2771 /* Debug */,
+				4113AB422DB8B44600ED2771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4113AB432DB8B44600ED2771 /* Build configuration list for PBXNativeTarget "MediBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4113AB442DB8B44600ED2771 /* Debug */,
+				4113AB452DB8B44600ED2771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4113AB462DB8B44600ED2771 /* Build configuration list for PBXNativeTarget "MediBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4113AB472DB8B44600ED2771 /* Debug */,
+				4113AB482DB8B44600ED2771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4113AB492DB8B44600ED2771 /* Build configuration list for PBXNativeTarget "MediBuddyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4113AB4A2DB8B44600ED2771 /* Debug */,
+				4113AB4B2DB8B44600ED2771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4113AC722DBA457500ED2771 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41D1B5102DBC09910028961D /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4113AC722DBA457500ED2771 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		41D1B5122DBC09A20028961D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4113AC722DBA457500ED2771 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4113AB172DB8B44300ED2771 /* Project object */;
+}
