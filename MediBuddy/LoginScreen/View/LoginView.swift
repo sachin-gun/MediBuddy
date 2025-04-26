@@ -2,19 +2,18 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var globalDto: GlobalDto
-    @State var universityEmail: String = ""
-    @State var password: String = ""
-    @State var isShowingGuestModeNavigation: Bool = false
-    @State var selectedBranch = ""
-    @State var branches: [String] = []
-    @State var showError: Bool = false
-    @State var errorMessage: String = ""
+    @State private var universityEmail: String = ""
+    @State private var password: String = ""
+    @State private var isShowingGuestModeNavigation: Bool = false
+    @State private var selectedBranch = ""
+    @State private var branches: [String] = []
 
     var body: some View {
         ZStack {
             CommonBackgroundView()
+
             VStack(spacing: 16) {
-                Image("logo")
+//                Image("logo")
                 HeadingTextView(text: "Sign In")
                     .padding(.top, 16)
                 NormalTextView(
@@ -28,36 +27,19 @@ struct LoginView: View {
                 )
 
                 CommonPasswordInputView(
-                    hint: "Password", password: $password)
+                    hint: "Password", password: $password
+                )
 
                 HStack {
                     Spacer()
                     HyperLinkTextView(text: "Forgot password?")
                         .onTapGesture {
-                            globalDto.paths
-                                .append(
-                                    Route.forgotPasswordVerifyEmail.rawValue
-                                )
+                            globalDto.paths.append(Route.forgotPasswordVerifyEmail.rawValue)
                         }
                 }
 
                 Button {
-                    Task {
-                        await LoginViewModel.shared
-                            .login(
-                                username: universityEmail, password: password)
-
-                        if globalDto.isLoggedIn {
-                            globalDto.paths
-                                .append(
-                                    Route.home.rawValue
-                                )
-                        } else {
-                            errorMessage = "Incorrect number or password."
-                            showError = true
-                        }
-                    }
-
+                    globalDto.paths.append(Route.PermanentLoginView.rawValue)
                 } label: {
                     CommonButtonView(
                         buttonText: "Sign In",
@@ -65,87 +47,14 @@ struct LoginView: View {
                         foregroundColor: Color.white
                     )
                 }
-
-//                Button {
-//                    isShowingGuestModeNavigation.toggle()
-//                } label: {
-//                    CommonButtonView(
-//                        buttonText: "Guest Mode",
-//                        backgroundColor: Color("inputBackground"),
-//                        foregroundColor: Color("brandColor")
-//                    )
-//                }
-
             }
             .padding(.horizontal, UIScreen.main.bounds.width * 0.05)
-
-//            VStack {
-//                Spacer()
-//                HStack {
-//                    NormalTextView(text: "Not a member?")
-//                    HyperLinkTextView(text: "Register now")
-//                        .onTapGesture {
-//                            globalDto.paths
-//                                .append(
-//                                    Route.registration.rawValue
-//                                )
-//                        }
-//                }
-//            }
         }
         .onAppear {
             branches = LoginViewModel.shared.getBranches()
         }
         .navigationBarBackButtonHidden(true)
-        .sheet(isPresented: $isShowingGuestModeNavigation) {
-            VStack {
-                VStack {
-                    HStack {
-                        SecondaryHeadingTextView(
-                            text: "What is your primary branch?")
-                        Spacer()
-                    }
-                    .padding(.horizontal, UIScreen.main.bounds.width * 0.05)
-                    List {
-
-                        Section {
-                            CommonDropDownListView(
-                                options: $branches,
-                                titleText: "Primary Branch",
-                                selection: $selectedBranch
-                            )
-                            .onChange(of: selectedBranch) {
-                                isShowingGuestModeNavigation = false
-                                globalDto.paths
-                                    .append(
-                                        Route.home.rawValue
-                                    )
-                            }
-                        }
-
-                    }
-                    .contentMargins(.vertical, 0)
-                }
-                Spacer()
-            }
-            .presentationDetents([.fraction(0.2)])
-            .presentationDragIndicator(Visibility.visible)
-            .ignoresSafeArea()
-            .frame(maxWidth: .infinity)
-            .padding(.top, 32)
-            .background(Color("commonBackground"))
-        }
-        .alert(
-            "Error!",
-            isPresented: $showError
-        ) {
-            Button("Cancel", role: .cancel) {}
-        } message: {
-            NormalTextView(
-                text: errorMessage, foregroundColor: Color.red)
-        }
     }
-
 }
 
 #Preview {

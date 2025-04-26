@@ -46,7 +46,7 @@ struct MediBuddyApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $globalDto.paths) {
-                PermanentLoginView()
+                RegisterView()
                     .navigationDestination(for: String.self) { route in
                         switch route {
                         case Route.home.rawValue:
@@ -55,6 +55,8 @@ struct MediBuddyApp: App {
                         ////                            ForgotPasswordView()
                         case Route.registration.rawValue:
                             RegisterView()
+                        case Route.PermanentLoginView.rawValue:
+                            PermanentLoginView()
                         default:
                             EmptyView()
                         }

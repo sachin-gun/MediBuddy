@@ -13,4 +13,5 @@ enum Route: String {
     case event = "Event"
     case facility = "Facility"
     case map = "Map"
+    case PermanentLoginView = "PermanentLoginView"
 }

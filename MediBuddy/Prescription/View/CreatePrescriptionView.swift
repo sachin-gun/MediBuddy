@@ -3,6 +3,7 @@ import SwiftUI
 struct CreatePrescriptionView: View {
     @State private var prescriptionName: String = ""
     @State private var navigateToCreateMedication = false
+    @State private var navigateToScanPrescription = false
 
     var body: some View {
         NavigationStack {
@@ -31,7 +32,7 @@ struct CreatePrescriptionView: View {
 
                     HStack(spacing: 16) {
                         Button(action: {
-                            // Upload logic
+                            navigateToScanPrescription = true
                         }) {
                             Text("Upload Prescription")
                                 .font(.subheadline.bold())
@@ -69,10 +70,11 @@ struct CreatePrescriptionView: View {
                 .padding()
                 .background(Color.white)
 
-                NavigationLink(
-                    destination: CreateMedicationView(),
-                    isActive: $navigateToCreateMedication
-                ) {
+                NavigationLink(destination: CreateMedicationView(), isActive: $navigateToCreateMedication) {
+                    EmptyView()
+                }
+
+                NavigationLink(destination: ScanPrescriptionView(), isActive: $navigateToScanPrescription) {
                     EmptyView()
                 }
             }
