@@ -29,7 +29,6 @@ class TextRecognitionService {
 
         request.recognitionLevel = .accurate
 
-        // 🔥 PREPROCESS IMAGE
         let processedImage = preprocessImage(image) ?? image
         let handler = VNImageRequestHandler(cgImage: processedImage, options: [:])
         try? handler.perform([request])
@@ -41,17 +40,15 @@ class TextRecognitionService {
         var medications: [ParsedMedication] = []
 
         for line in lines {
-            // Try to split using the dash (-) to isolate duration
             let components = line.components(separatedBy: "-")
             guard components.count == 2 else { continue }
 
             let leftPart = components[0].trimmingCharacters(in: .whitespaces)
             let duration = components[1].trimmingCharacters(in: .whitespaces)
 
-            // Remove number and dot at start (e.g., "1.")
             let trimmed = leftPart.drop(while: { $0 != "." }).dropFirst().trimmingCharacters(in: .whitespaces)
 
-            // Extract dosage using regex
+
             let dosagePattern = #"(\d+\s?(?:mg|units|Caps))"#
             if let dosageRange = trimmed.range(of: dosagePattern, options: .regularExpression) {
                 let name = String(trimmed[..<dosageRange.lowerBound]).trimmingCharacters(in: .whitespaces)
@@ -60,7 +57,6 @@ class TextRecognitionService {
 
                 medications.append(ParsedMedication(name: name, dosage: dosage, instructions: instructions, duration: duration))
             } else {
-                // Fallback in case dosage isn't found
                 medications.append(ParsedMedication(name: trimmed, dosage: "N/A", instructions: "N/A", duration: duration))
             }
         }
@@ -72,19 +68,16 @@ class TextRecognitionService {
         let ciImage = CIImage(cgImage: cgImage)
         let context = CIContext()
 
-        // Step 1: Convert to grayscale
         let grayscale = CIFilter.colorControls()
         grayscale.inputImage = ciImage
-        grayscale.saturation = 0 // grayscale
+        grayscale.saturation = 0
         grayscale.brightness = 0.0
-        grayscale.contrast = 1.2 // boost contrast a little
+        grayscale.contrast = 1.2
 
-        // Step 2: Apply exposure adjustment
         let exposure = CIFilter.exposureAdjust()
         exposure.inputImage = grayscale.outputImage
-        exposure.ev = 0.7 // brighten slightly
+        exposure.ev = 0.7
 
-        // Step 3: Convert back to CGImage
         if let outputImage = exposure.outputImage,
            let cgOutput = context.createCGImage(outputImage, from: outputImage.extent) {
             return cgOutput

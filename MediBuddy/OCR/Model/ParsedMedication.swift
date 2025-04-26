@@ -13,7 +13,6 @@ struct ParsedMedication: Identifiable {
     let instructions: String
     let duration: String
     var daysRemaining: Int {
-        // Extract number of months from duration and convert to days
         if let months = Int(duration.components(separatedBy: " ").first ?? "") {
             return months * 30
         }

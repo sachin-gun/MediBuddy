@@ -24,7 +24,6 @@ class NotificationManager {
         }
     }
 
-    /// Schedule notification at exact date + time
     func scheduleNotification(title: String, body: String, at date: Date, repeats: Bool = false) {
         let content = UNMutableNotificationContent()
         content.title = "Medi Buddy"

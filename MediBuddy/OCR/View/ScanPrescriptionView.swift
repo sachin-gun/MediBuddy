@@ -56,7 +56,7 @@ struct ScanPrescriptionView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                Text("📄 Scan Your Prescription")
+                Text("Scan Your Prescription")
                     .font(.title2.bold())
 
                 if let image = inputImage {
@@ -90,7 +90,6 @@ struct ScanPrescriptionView: View {
 
                 Spacer()
 
-//                 Navigation trigger to summary view
                 NavigationLink(
                     destination: PrescriptionDetailViewOCR(
                         prescriptionName: "Diabetes Prescription",

@@ -19,7 +19,7 @@ struct PrescriptionDetailView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                // Top Bar
+    
                 HStack {
                     Label("Guest", systemImage: "person.crop.circle")
                         .font(.headline)
@@ -33,7 +33,7 @@ struct PrescriptionDetailView: View {
                 .background(Color("brandColor"))
                 .foregroundColor(.white)
 
-                // Title + Actions
+
                 HStack {
                     Text(prescription.title)
                         .font(.title3.bold())
@@ -47,7 +47,6 @@ struct PrescriptionDetailView: View {
                 }
                 .padding()
 
-                // Upload View
                 HStack {
                     Text(fileName)
                         .foregroundColor(.black)
@@ -60,7 +59,7 @@ struct PrescriptionDetailView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .padding(.horizontal)
 
-                // Enter Medication
+
                 Button(action: {}) {
                     Text("Enter Medication")
                         .font(.subheadline.bold())
@@ -73,7 +72,6 @@ struct PrescriptionDetailView: View {
                 .padding(.horizontal)
                 .padding(.top, 4)
 
-                // Medication Cards
                 ScrollView {
                     VStack(spacing: 12) {
                         ForEach(medications) { med in
@@ -98,7 +96,7 @@ struct PrescriptionDetailView: View {
                 .padding()
                 .background(Color.white)
 
-                // NavigationLink to MedicationDetailView
+
                 NavigationLink(
                     destination: selectedMedication.map { MedicationDetailView(medication: $0) },
                     isActive: Binding(
@@ -116,7 +114,7 @@ struct PrescriptionDetailView: View {
     }
 }
 
-// Updated MedicationCard1 with no change
+
 struct MedicationCard1: View {
     let med: MedicationModel
 

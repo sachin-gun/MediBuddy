@@ -8,7 +8,7 @@ struct PrescriptionDetailViewOCR: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // Top Bar
+        
             HStack {
                 Label("Guest", systemImage: "person.crop.circle")
                     .font(.headline)
@@ -22,7 +22,7 @@ struct PrescriptionDetailViewOCR: View {
             .background(Color("brandColor"))
             .foregroundColor(.white)
 
-            // Title Bar
+   
             HStack {
                 Text(prescriptionName)
                     .font(.title3.bold())
@@ -36,7 +36,6 @@ struct PrescriptionDetailViewOCR: View {
             }
             .padding()
 
-            // Upload Box
             HStack {
                 Text(imageName)
                     .foregroundColor(.black)
@@ -49,7 +48,7 @@ struct PrescriptionDetailViewOCR: View {
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .padding(.horizontal)
 
-            // Enter Medication Button
+
             Button(action: {
                 navigateToCreateMedication = true
             }) {
@@ -64,7 +63,7 @@ struct PrescriptionDetailViewOCR: View {
             .padding(.horizontal)
             .padding(.top, 4)
 
-            // Medication Cards
+
             ScrollView {
                 VStack(spacing: 12) {
                     ForEach(medications) { med in
@@ -114,7 +113,7 @@ struct PrescriptionDetailViewOCR: View {
     }
 }
 
-// Tab Item View
+
 struct TabBarItem8: View {
     let icon: String
     let label: String
